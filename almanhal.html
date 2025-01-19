@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="font/leifa.css" />
+    <link rel="stylesheet" href="font/raleway/raleway.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/images/logo-white-min.svg" />
+  </head>
+  <body>
+    <section class="bg-black px-4">
+      <header class="pb-32 py-8" data-aos="fade-down" data-aos-duration="500">
+        <div class="flex items-center justify-between">
+          <!-- Left: Logo -->
+          <div class="text-white font-bold text-xl">
+            <a href="index.html" class="text-base hover-text"
+              ><img src="images/logo-white-min.svg" alt="Logo" class="h-6"
+            /></a>
+            <!-- Add your logo image here -->
+          </div>
+
+          <!-- Center: About and Work -->
+          <div class="flex space-x-10 text-white font-medium">
+            <a
+              href="about.html"
+              class="hover-text text-base nav-optn-black"
+              data-index="0"
+              >About</a
+            >
+            <a
+              href="work.html"
+              class="hover-text text-base"
+              style="text-decoration: underline; text-underline-offset: 8px"
+              >Work</a
+            >
+          </div>
+
+          <!-- Right: Contact -->
+          <div class="text-white font-medium">
+            <a
+              href="contact.html"
+              class="hover-text text-base nav-optn-black"
+              data-index="2"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </header>
+
+      <!-- work -->
+      <div class="w-full">
+        <img
+          src="images/ALmanhal/1.png"
+          alt="Full Width Image"
+          class="w-full h-auto"
+        />
+      </div>
+
+      <div
+        class="flex py-24 flex-col md:flex-row w-full space-y-4 md:space-y-0 md:space-x-4 gap-y-8"
+      >
+        <h2
+          class="text-6xl w-2/4 min-w-80 font-medium md:text-left hover-text"
+          data-aos="flip-up"
+          data-aos-duration="500"
+        >
+          _About
+        </h2>
+        <p
+          class="text-xl w-3/4 leading-normal md:text-left max-sm:w-full max-sm:text-base"
+          data-aos="flip-up"
+          data-aos-duration="500"
+          data-aos-delay="150"
+        >
+          For Al Manhal School Riyadh, the UI/UX design focused on creating a
+          clean, user-friendly, and responsive interface tailored to the needs
+          of students, parents, and educators. The design featured a calming
+          educational color palette, a student-centric dashboard for assignments
+          and schedules, and interactive elements like online admission forms
+          and event calendars. Prioritizing a mobile-first approach, the
+          interface ensured seamless access on all devices, with clear
+          navigation, quick load times, and accessibility features to cater to
+          diverse users. The result was a modern, engaging platform that
+          enhanced communication and reflected the school’s commitment to
+          innovation in education.
+        </p>
+      </div>
+
+      <div class="w-3/4 mx-auto max-sm:w-full pb-24">
+        <img
+          src="images/ALmanhal/2.png"
+          alt="Full Width Image"
+          class="w-full h-auto"
+        />
+      </div>
+
+      <div class="w-3/4 mx-auto max-sm:w-full pb-24">
+        <img
+          src="images/ALmanhal/3.png"
+          alt="Full Width Image"
+          class="w-full h-auto"
+        />
+      </div>
+
+      <div class="w-3/4 mx-auto max-sm:w-full pb-24">
+        <img
+          src="images/ALmanhal/4.png"
+          alt="Full Width Image"
+          class="w-full h-auto"
+        />
+      </div>
+
+      <div class="w-3/4 mx-auto max-sm:w-full pb-24">
+        <img
+          src="images/thankyou.png"
+          alt="Full Width Image"
+          class="w-full h-auto"
+        />
+      </div>
+
+      <!-- copied container -->
+      <div id="notify" class="notify"></div>
+      <!-- footer -->
+
+      <footer class="pt-24 pb-36 border-t border-[#2F3132]">
+        <div class="w-full max-w-full flex flex-wrap justify-between gap-8">
+          <!-- Left Section -->
+          <div>
+            <!-- Logo -->
+            <div class="mb-6 hover-text">
+              <img src="images/logo-white-full.svg " alt="Logo" class="h-6" />
+            </div>
+            <!-- Headings and Paragraphs -->
+            <h3 class="text-6xl leifa leading-snug hover-text">Lets Work</h3>
+
+            <h3 class="text-6xl leifa leading-snug hover-text">Together.</h3>
+          </div>
+
+          <!-- Center Section -->
+
+          <!-- Right Section -->
+          <div class="w-full">
+            <!-- Heading -->
+            <h3 class="text-6xl leifa leading-snug text-end">Contact</h3>
+            <!-- Sub-headings -->
+            <ul class="space-y-2 text-right">
+              <li>
+                <a
+                  onclick="handleButtonClick()"
+                  class="text-lg text-gray-300 font-medium text-right nav-optn-black"
+                  data-index="10"
+                  >E-mail</a
+                >
+              </li>
+              <li>
+                <a
+                  onclick="openWhatsApp()"
+                  class="text-lg text-gray-300 font-medium text-right nav-optn-black"
+                  data-index="11"
+                  >WhatsApp</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <!-- 2nd section  -->
+
+    <section class="overlay bg-white px-4 my-div">
+      <header class="pb-32 py-8">
+        <div class="flex items-center justify-between">
+          <!-- Left: Logo -->
+          <div class="text-black font-bold text-xl">
+            <a href="index.html" class="text-base"
+              ><img src="images/logo-black-min.svg" alt="Logo" class="h-6"
+            /></a>
+            <!-- Add your logo image here -->
+          </div>
+
+          <!-- Center: About and Work -->
+          <div class="flex space-x-10 text-black font-medium">
+            <a href="#about" class="text-base nav-optn-white" data-index="0"
+              >About</a
+            >
+            <a
+              href="#work"
+              class="text-base"
+              style="text-decoration: underline; text-underline-offset: 8px"
+              >Work</a
+            >
+          </div>
+
+          <!-- Right: Contact -->
+          <div class="text-black font-medium">
+            <a href="#contact" class="text-base nav-optn-white" data-index="2"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </header>
+
+      <div class="w-full">
+        <img
+          src="images/ALmanhal/1.png"
+          alt="Full Width Image "
+          class="w-full h-auto invert"
+        />
+      </div>
+
+      <div
+        class="flex py-24 flex-col md:flex-row w-full space-y-4 md:space-y-0 md:space-x-4 gap-y-8"
+      >
+        <h2
+          class="text-6xl w-2/4 min-w-80 font-medium md:text-left text-black"
+          data-aos="flip-up"
+          data-aos-duration="500"
+        >
+          _About
+        </h2>
+        <p
+          class="text-xl w-3/4 leading-normal md:text-left text-black max-sm:w-full max-sm:text-base"
+          data-aos="flip-up"
+          data-aos-duration="500"
+          data-aos-delay="150"
+        >
+          For Al Manhal School Riyadh, the UI/UX design focused on creating a
+          clean, user-friendly, and responsive interface tailored to the needs
+          of students, parents, and educators. The design featured a calming
+          educational color palette, a student-centric dashboard for assignments
+          and schedules, and interactive elements like online admission forms
+          and event calendars. Prioritizing a mobile-first approach, the
+          interface ensured seamless access on all devices, with clear
+          navigation, quick load times, and accessibility features to cater to
+          diverse users. The result was a modern, engaging platform that
+          enhanced communication and reflected the school’s commitment to
+          innovation in education.
+        </p>
+      </div>
+
+      <div class="w-3/4 mx-auto max-sm:w-full pb-24">
+        <img
+          src="images/ALmanhal/2.png"
+          alt="Full Width Image"
+          class="w-full h-auto invert"
+        />
+      </div>
+
+      <div class="w-3/4 mx-auto max-sm:w-full pb-24">
+        <img
+          src="images/ALmanhal/3-white.png"
+          alt="Full Width Image"
+          class="w-full h-auto"
+        />
+      </div>
+
+      <div class="w-3/4 mx-auto max-sm:w-full pb-24">
+        <img
+          src="images/ALmanhal/4-white.png"
+          alt="Full Width Image"
+          class="w-full h-auto"
+        />
+      </div>
+
+      <div class="w-3/4 mx-auto max-sm:w-full pb-24">
+        <img
+          src="images/thankyou.png"
+          alt="Full Width Image"
+          class="w-full h-auto invert"
+        />
+      </div>
+
+      <!-- footer -->
+
+      <footer class="pt-24 pb-36 border-t border-[#2F3132]">
+        <div class="w-full max-w-full flex flex-wrap justify-between gap-8">
+          <!-- Left Section -->
+          <div>
+            <!-- Logo -->
+            <div class="mb-6">
+              <img src="images/logo-black-full.svg" alt="Logo" class="h-6" />
+            </div>
+            <!-- Headings and Paragraphs -->
+            <h3 class="text-6xl leifa leading-snug text-black">Don't be</h3>
+
+            <h3 class="text-6xl leifa leading-snug text-black">Shy.</h3>
+          </div>
+
+          <!-- Right Section -->
+          <div class="w-full">
+            <!-- Heading -->
+            <h3 class="text-6xl leifa leading-snug text-end text-black">
+              Contact
+            </h3>
+            <!-- Sub-headings -->
+            <ul class="space-y-2 text-right">
+              <li>
+                <a
+                  href="#"
+                  class="text-lg text-black font-medium text-right nav-optn-white"
+                  data-index="10"
+                  >E-mail</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-lg text-black font-medium text-right nav-optn-white"
+                  data-index="11"
+                  >WhatsApp</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <script src="js/index.js"></script>
+    <script src="js/height.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

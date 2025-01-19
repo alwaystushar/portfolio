@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Leifa';
+    src: url('Leifa-Thin.eot');
+    src: url('Leifa-Thin.eot?#iefix') format('embedded-opentype'),
+        url('Leifa-Thin.woff2') format('woff2'),
+        url('Leifa-Thin.woff') format('woff'),
+        url('Leifa-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="font/leifa.css" />
+    <link rel="stylesheet" href="font/raleway/raleway.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/images/logo-white-min.svg" />
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+
+  </head>
+  <body>
+    <section class="bg-black px-4">
+      <header class="pb-32 py-8" data-aos="fade-down" data-aos-duration="500">
+        <div class="flex items-center justify-between">
+          <!-- Left: Logo -->
+          <div class="text-white font-bold text-xl">
+            <a href="index.html" class="text-base hover-text"
+              ><img src="images/logo-white-min.svg" alt="Logo" class="h-6"
+            /></a>
+            <!-- Add your logo image here -->
+          </div>
+
+          <!-- Center: About and Work -->
+          <div class="flex space-x-10 text-white font-medium">
+            <a href="about.html" class="hover-text text-base nav-optn-black" data-index="0">About</a>
+            <a href="work.html" class="hover-text text-base nav-optn-black" data-index="1">Work</a>
+          </div>
+
+          <!-- Right: Contact -->
+          <div class="text-white font-medium">
+            <a href="contact.html" class="hover-text text-base" style="text-decoration: underline; text-underline-offset: 8px;">Contact</a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Contact -->
+
+
+      <div class="pb-24"
+      ><h2
+      
+        class="hover-text text-6xl lg:font-medium min-w-96 w-1/4 lg:leading-relaxed  max-sm:leading-relaxed max-sm:w-full max-sm:text-4xl "
+        data-aos="flip-up"
+        data-aos-duration="500"
+      >
+       
+        <span class="leifa">Say Hi! </span>and tell me about your idea.</span>
+       
+      </h2>
+      <p class="pt-4"
+      data-aos="flip-up"
+      data-aos-duration="800">Have a nice work? Reach out and let's chat.</p>
+    </div>
+
+
+    <div class="mx-auto  flex flex-col-reverse md:flex-row w-full border-t border-[#2F3132] ">
+        <!-- Left Section -->
+        <div class="w-1/4 flex flex-col  max-sm:w-full min-w-80 py-20" >
+          <h2 class="text-3xl font-medium text-white pb-8"  data-aos="flip-up"
+          data-aos-duration="500">Get in touch.</h2>
+          <h2 class="text-xl text-white pb-5"  data-aos="flip-up"
+          data-aos-duration="550">I love to hear the amazing ideas!</h2>
+          <a onclick="handleButtonClick()" class="text-white pb-4 " style="text-decoration: underline; text-underline-offset: 8px;"  data-aos="flip-up"
+          data-aos-duration="600">E-Mail Me</a>
+          <a onclick="openWhatsApp()"  class="text-white underline-offset-4" style="text-decoration: underline; text-underline-offset: 8px;"  data-aos="flip-up"
+          data-aos-duration="650">WhatsApp</a>
+        </div>
+    
+        <!-- Divider -->
+        <div class="hidden md:block w-px bg-[#2F3132]"  data-aos="flip-up"
+        data-aos-duration="500"></div>
+    
+        <!-- Right Section -->
+
+        
+        <div class="w-3/4 flex flex-col gap-4 pl-24 py-20 max-sm:pl-0">
+          <h2 class="text-6xl text-white pb-16 max-sm:text-4xl max-sm:w-full"  data-aos="flip-up"
+          data-aos-duration="500">How can I reach you?</h2>
+         
+         
+          <form  id="contact-form">
+
+          <!-- name  -->
+          <div class="wave-group pb-8"  data-aos="flip-up"
+          data-aos-duration="500">
+            <input type="text" id="name" name="name"  required class="input overflow-hidden" style="width: 370px;">
+            <span class="bar" style="width: 370px;"></span>
+            <label for="name" class="label">
+              <span class="label-char" style="--index: 0">N</span>
+              <span class="label-char" style="--index: 1">a</span>
+              <span class="label-char" style="--index: 2">m</span>
+              <span class="label-char" style="--index: 3">e</span>
+            </label>
+          </div>
+
+<!-- email  -->
+
+<div class="wave-group pb-8"  data-aos="flip-up"
+data-aos-duration="500">
+    <input type="email" id="email" name="email" required class="input overflow-hidden" style="width: 370px;">
+    <span class="bar" style="width: 370px;"></span>
+    <label  for="email" class="label">
+      <span class="label-char" style="--index: 0">M</span>
+      <span class="label-char" style="--index: 1">a</span>
+      <span class="label-char" style="--index: 2">i</span>
+      <span class="label-char" style="--index: 3">l</span>
+    </label>
+  </div>
+
+
+  <!-- phone number -->
+  <div class="wave-group pb-8"  data-aos="flip-up"
+  data-aos-duration="500">
+    <input type="text" id="phone" required type="" class="input overflow-y-hidden " style="width: 370px;">
+    <span class="bar" style="width: 370px;"></span>
+    <label for="phone" class="label">
+      <span class="label-char" style="--index: 0">P</span>
+      <span class="label-char" style="--index: 1">h</span>
+      <span class="label-char" style="--index: 2">o</span>
+      <span class="label-char" style="--index: 3">n</span>
+      <span class="label-char" style="--index: 4">e</span>
+      <span class="label-char" style="--index: 4">&nbsp;</span>
+      <span class="label-char" style="--index: 5">N</span>
+      <span class="label-char" style="--index: 6">o</span>
+      <span class="label-char" style="--index: 7">.</span>
+    </label>
+  </div>
+
+  <!-- discription -->
+  <div class="wave-group pb-16"  data-aos="flip-up"
+  data-aos-duration="500">
+    <textarea id="message" name="message" required class="input" rows="4" style="width: 370px;"></textarea>
+    <span class="bar" style="width: 370px;"></span>
+    <label for="message" class="label">
+      <span class="label-char" style="--index: 0">T</span>
+      <span class="label-char" style="--index: 1">e</span>
+      <span class="label-char" style="--index: 2">l</span>
+      <span class="label-char" style="--index: 3">l</span>
+      <span class="label-char" style="--index: 4">&nbsp;</span>
+      <span class="label-char" style="--index: 5">s</span>
+      <span class="label-char" style="--index: 6">o</span>
+      <span class="label-char" style="--index: 7">m</span>
+      <span class="label-char" style="--index: 8">e</span>
+      <span class="label-char" style="--index: 9">t</span>
+      <span class="label-char" style="--index: 10">h</span>
+      <span class="label-char" style="--index: 11">i</span>
+      <span class="label-char" style="--index: 12">n</span>
+      <span class="label-char" style="--index: 13">g</span>
+      <span class="label-char" style="--index: 14">&nbsp;</span>
+      <span class="label-char" style="--index: 12">a</span>
+      <span class="label-char" style="--index: 11">b</span>
+      <span class="label-char" style="--index: 10">o</span>
+      <span class="label-char" style="--index: 9">u</span>
+      <span class="label-char" style="--index: 8">t</span>
+      <span class="label-char" style="--index: 7">&nbsp;</span>
+      <span class="label-char" style="--index: 7">y</span>
+      <span class="label-char" style="--index: 6">o</span>
+      <span class="label-char" style="--index: 5">u</span>
+      <span class="label-char" style="--index: 4">r</span>
+      <span class="label-char" style="--index: 4">&nbsp;</span>
+      <span class="label-char" style="--index: 3">i</span>
+      <span class="label-char" style="--index: 2">d</span>
+      <span class="label-char" style="--index: 1">e</span>
+      <span class="label-char" style="--index: 0">a</span>
+    </label>
+  </div>
+
+ <button type="submit" id="submit" class="text-white underline-offset-4  text-start hover-text" style="text-decoration: underline; text-underline-offset: 8px;"  data-aos="flip-up"
+  data-aos-duration="500">Submit</button>
+
+</form>
+        </div>
+      </div>
+
+
+       <!-- copied container -->
+  <div id="notify" class="notify"></div>
+
+       <!-- Notification Container -->
+    <div id="notification-container" class="notification-container"></div>
+
+      <!-- footer -->
+
+      <footer class="pt-24 pb-36 border-t border-[#2F3132]">
+        <div
+          class="w-full max-w-full flex flex-wrap justify-between gap-8"
+        >
+          <!-- Left Section -->
+          <div>
+            <!-- Logo -->
+            <div class="mb-6 hover-text">
+              <img src="images/logo-white-full.svg " alt="Logo" class="h-6" />
+            </div>
+            <!-- Headings and Paragraphs -->
+            <h3 class="text-6xl leifa leading-snug hover-text">Lets Work</h3>
+
+            <h3 class="text-6xl leifa leading-snug hover-text">Together.</h3>
+          </div>
+
+          <!-- Center Section -->
+
+          <!-- Right Section -->
+          <div class="w-full " >
+            <!-- Heading -->
+            <h3 class="text-6xl leifa leading-snug text-end">Contact</h3>
+            <!-- Sub-headings -->
+            <ul class="space-y-2 text-right">
+              <li>
+                <a onclick="handleButtonClick()" class="text-lg text-gray-300 font-medium text-right nav-optn-black" data-index="10">E-mail</a>
+              </li>
+              <li>
+                <a onclick="openWhatsApp()" class="text-lg text-gray-300 font-medium text-right nav-optn-black" data-index="11"
+                  >WhatsApp</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <!-- 2nd section  -->
+
+    <section class="overlay bg-white px-4 my-div">
+      <header class="pb-32 py-8">
+        <div class="flex items-center justify-between">
+          <!-- Left: Logo -->
+          <div class="text-black font-bold text-xl">
+            <a href="index.html" class="text-base"
+              ><img src="images/logo-black-min.svg" alt="Logo" class="h-6"
+            /></a>
+            <!-- Add your logo image here -->
+          </div>
+
+          <!-- Center: About and Work -->
+          <div class="flex space-x-10 text-black font-medium">
+            <a href="#about" class="text-base nav-optn-white" data-index="0">About</a>
+            <a href="#work" class="text-base nav-optn-white" data-index="1">Work</a>
+          </div>
+
+          <!-- Right: Contact -->
+          <div class="text-black font-medium">
+            <a href="#contact" class="text-base" style="text-decoration: underline; text-underline-offset: 8px;">Contact</a>
+          </div>
+        </div>
+      </header>
+
+      <!-- contact -->
+
+
+
+      
+      <div class="pb-24"
+      ><h2
+      
+        class="hover-text text-6xl text-black lg:font-medium min-w-96 w-1/4 lg:leading-relaxed  max-sm:leading-relaxed max-sm:w-full max-sm:text-4xl "
+        data-aos="flip-up"
+        data-aos-duration="500"
+      >
+       
+        <span class="leifa text-black">Say Hi! </span>and tell me about your idea.</span>
+       
+      </h2>
+      <p class="pt-4 text-black">Have a nice work? Reach out and let's chat.</p>
+    </div>
+
+
+    <div class="mx-auto  flex flex-col-reverse md:flex-row w-full border-t border-[#2F3132] ">
+        <!-- Left Section -->
+        <div class="w-1/4 flex flex-col  max-sm:w-full min-w-80 py-20">
+          <h2 class="text-3xl font-medium text-black pb-8">Get in touch.</h2>
+          <h2 class="text-xl text-black pb-5">I love to hear the amazing ideas!</h2>
+          <a href="" class="text-black pb-4 " style="text-decoration: underline; text-underline-offset: 8px;">E-Mail Me</a>
+          <a href="" class="text-black underline-offset-4" style="text-decoration: underline; text-underline-offset: 8px;">WhatsApp</a>
+        </div>
+    
+        <!-- Divider -->
+        <div class="hidden md:block w-px bg-[#2F3132]"></div>
+    
+        <!-- Right Section -->
+
+        
+        <div class="w-3/4 flex flex-col gap-4 pl-24 py-20 max-sm:pl-0">
+          <h2 class="text-6xl text-black pb-16 max-sm:text-4xl max-sm:w-full"  data-aos="flip-up"
+          data-aos-duration="500">How can I reach you?</h2>
+         
+         
+          <form action="" >
+
+          <!-- name  -->
+          <div class="wave-group pb-8"  data-aos="flip-up"
+          data-aos-duration="500">
+            <input required="" type="text" class="input " style="width: 370px;">
+            <span class="bar" style="width: 370px;"></span>
+            <label class="label">
+              <span class="label-char text-black" style="--index: 0">N</span>
+              <span class="label-char text-black" style="--index: 1">a</span>
+              <span class="label-char text-black" style="--index: 2">m</span>
+              <span class="label-char text-black" style="--index: 3">e</span>
+            </label>
+          </div>
+
+<!-- email  -->
+
+<div class="wave-group pb-8"  data-aos="flip-up"
+data-aos-duration="500">
+    <input required="" type="text" class="input " style="width: 370px;">
+    <span class="bar" style="width: 370px;"></span>
+    <label class="label">
+      <span class="label-char text-black" style="--index: 0">M</span>
+      <span class="label-char text-black" style="--index: 1">a</span>
+      <span class="label-char text-black" style="--index: 2">i</span>
+      <span class="label-char text-black" style="--index: 3">l</span>
+    </label>
+  </div>
+
+
+  <!-- phone number -->
+  <div class="wave-group pb-8"  data-aos="flip-up"
+  data-aos-duration="500">
+    <input required="" type="text" class="input " style="width: 370px;">
+    <span class="bar" style="width: 370px;"></span>
+    <label class="label">
+      <span class="label-char text-black" style="--index: 0">P</span>
+      <span class="label-char text-black" style="--index: 1">h</span>
+      <span class="label-char text-black" style="--index: 2">o</span>
+      <span class="label-char text-black" style="--index: 3">n</span>
+      <span class="label-char text-black" style="--index: 4">e</span>
+      <span class="label-char text-black" style="--index: 4">&nbsp;</span>
+      <span class="label-char text-black" style="--index: 5">N</span>
+      <span class="label-char text-black" style="--index: 6">o</span>
+      <span class="label-char text-black" style="--index: 7">.</span>
+    </label>
+  </div>
+
+  <!-- discription -->
+  <div class="wave-group pb-16"  data-aos="flip-up"
+  data-aos-duration="500">
+    <textarea required="" class="input" rows="4" style="width: 370px;"></textarea>
+    <span class="bar" style="width: 370px;"></span>
+    <label class="label">
+      <span class="label-char text-black" style="--index: 0">T</span>
+      <span class="label-char text-black" style="--index: 1">e</span>
+      <span class="label-char text-black" style="--index: 2">l</span>
+      <span class="label-char text-black" style="--index: 3">l</span>
+      <span class="label-char text-black" style="--index: 4">&nbsp;</span>
+      <span class="label-char text-black" style="--index: 5">s</span>
+      <span class="label-char text-black" style="--index: 6">o</span>
+      <span class="label-char text-black" style="--index: 7">m</span>
+      <span class="label-char text-black" style="--index: 8">e</span>
+      <span class="label-char text-black" style="--index: 9">t</span>
+      <span class="label-char text-black" style="--index: 10">h</span>
+      <span class="label-char text-black" style="--index: 11">i</span>
+      <span class="label-char text-black" style="--index: 12">n</span>
+      <span class="label-char text-black" style="--index: 13">g</span>
+      <span class="label-char text-black" style="--index: 14">&nbsp;</span>
+      <span class="label-char text-black" style="--index: 12">a</span>
+      <span class="label-char text-black" style="--index: 11">b</span>
+      <span class="label-char text-black" style="--index: 10">o</span>
+      <span class="label-char text-black" style="--index: 9">u</span>
+      <span class="label-char text-black" style="--index: 8">t</span>
+      <span class="label-char text-black" style="--index: 7">&nbsp;</span>
+      <span class="label-char text-black" style="--index: 7">y</span>
+      <span class="label-char text-black" style="--index: 6">o</span>
+      <span class="label-char text-black" style="--index: 5">u</span>
+      <span class="label-char text-black" style="--index: 4">r</span>
+      <span class="label-char text-black" style="--index: 4">&nbsp;</span>
+      <span class="label-char text-black" style="--index: 3">i</span>
+      <span class="label-char text-black" style="--index: 2">d</span>
+      <span class="label-char text-black" style="--index: 1">e</span>
+      <span class="label-char text-black" style="--index: 0">a</span>
+    </label>
+  </div>
+
+  <p   class="text-black underline-offset-4 text-start" style="text-decoration: underline; text-underline-offset: 8px;"  data-aos="flip-up"
+  data-aos-duration="500">Submit</p>
+
+</form>
+        </div>
+      </div>
+
+
+      <!-- footer -->
+      <footer class="pt-24 pb-36 border-t border-[#2F3132]">
+        <div
+          class="w-full max-w-full flex flex-wrap justify-between gap-8"
+        >
+          <!-- Left Section -->
+          <div>
+            <!-- Logo -->
+            <div class="mb-6">
+              <img src="images/logo-black-full.svg" alt="Logo" class="h-6" />
+            </div>
+            <!-- Headings and Paragraphs -->
+            <h3 class="text-6xl leifa leading-snug text-black">Don't be</h3>
+
+            <h3 class="text-6xl leifa leading-snug text-black">Shy.</h3>
+          </div>
+
+
+          <!-- Right Section -->
+          <div class="w-full ">
+            <!-- Heading -->
+            <h3 class="text-6xl leifa leading-snug text-end text-black">
+              Contact
+            </h3>
+            <!-- Sub-headings -->
+            <ul class="space-y-2 text-right">
+              <li>
+                <a href="#" class="text-lg text-black font-medium text-right nav-optn-white" data-index="10">E-mail</a>
+              </li>
+              <li>
+                <a href="#" class="text-lg text-black font-medium text-right nav-optn-white" data-index="11">WhatsApp</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <script src="js/index.js"></script>
+    <script src="js/height.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script>
+      AOS.init();
+    </script>
+
+
+
+
+
+
+  </body>
+</html>
