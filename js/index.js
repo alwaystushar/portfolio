@@ -252,18 +252,27 @@ window.addEventListener('resize', adjustDivHeight);
         phone: document.getElementById("phone").value,
         message: document.getElementById("message").value,
       };
-
+    
       // Send form data via EmailJS
       emailjs.send("service_65eojrt", "template_mlmpvgd", formData).then(
-        function (response) {
+        (response) => {
           showNotification("success", "Your message has been sent successfully!");
+    
+          // Clear the form fields after success
+          document.getElementById("contact-form").reset();
         },
-        function (error) {
+        (error) => {
           showNotification("error", "Failed to send your message. Please try again.");
+          
+          // Optionally clear the form even on error (can be removed if not desired)
+          document.getElementById("contact-form").reset();
         }
       );
     });
 
+
+
+    
   // Function to display notification
   function showNotification(type, message) {
     const container = document.getElementById("notification-container");
@@ -317,6 +326,10 @@ function handleButtonClick() {
     window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
   }, 500); // Small delay for notify visibility
 }
+
+
+
+
 
 function shownotify(type, message) {
   const notify = document.getElementById("notify");
