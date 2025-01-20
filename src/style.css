@@ -254,19 +254,19 @@ body{
       @keyframes moveDot {
         0%,
         100% {
-          top: 0%;
-          right: 0%;
+          top: 1%;
+          right: 1%;
         }
         25% {
-          top: 0%;
-          right: calc(100% - 2px);
+          top: 1%;
+          right: calc(99%);
         }
         50% {
-          top: calc(100%);
-          right: calc(100% - 2px );
+          top: calc(99%);
+          right: calc(98% );
         }
         75% {
-          top: calc(100% );
+          top: calc(99%);
           right: 0%;
         }
       }
@@ -413,4 +413,14 @@ body{
           opacity: 0;
           transform: translateY(20px);
         }
+      }
+
+
+      .hide-scrollbar {
+        scrollbar-width: none; /* For Firefox */
+        -ms-overflow-style: none; /* For Internet Explorer and Edge */
+      }
+      
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none; /* For Chrome, Safari, and Edge */
       }
