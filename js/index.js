@@ -119,7 +119,7 @@ window.addEventListener('resize', adjustDivHeight);
         return new Promise((resolve) => setTimeout(resolve, ms));
     }
     
-    const phrases = ["PRODUCT DESIGNER", "UI/UX DESIGNER", "FRONTEND DEVLOPER"];
+    const phrases = ["PRODUCT DESIGNER", "UI/UX DESIGNER", "FRONTEND DEVELOPER"];
     const el1 = document.getElementById("typed");
     const el2 = document.getElementById("white-typed");
     
