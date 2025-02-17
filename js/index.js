@@ -360,3 +360,16 @@ function openWhatsApp() {
   // Open WhatsApp with prefilled message
   window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank");
 }
+
+
+document.querySelectorAll('.info').forEach(info => {
+  const tooltipText = info.getAttribute('data-tooltip');
+
+  // Create tooltip div
+  const tooltip = document.createElement('div');
+  tooltip.classList.add('tooltip');
+  tooltip.textContent = tooltipText;
+
+  // Append tooltip to the info div
+  info.appendChild(tooltip);
+});

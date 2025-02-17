@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Effect with Data Tooltip</title>
+    <style>
+        .info {
+            position: relative;
+            display: inline-block;
+            padding: 20px;
+            background-color: #3498db;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 20px;
+        }
+
+        .tooltip {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: black;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        .info:hover .tooltip {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(5px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="info" data-tooltip="This is tooltip for first box!"> Hover me 1 </div>
+    <div class="info" data-tooltip="This is tooltip for second box!"> Hover me 2 </div>
+    <div class="info" data-tooltip="This is tooltip for third box!"> Hover me 3 </div>
+
+    <script>
+        document.querySelectorAll('.info').forEach(info => {
+            const tooltipText = info.getAttribute('data-tooltip');
+
+            // Create tooltip div
+            const tooltip = document.createElement('div');
+            tooltip.classList.add('tooltip');
+            tooltip.textContent = tooltipText;
+
+            // Append tooltip to the info div
+            info.appendChild(tooltip);
+        });
+    </script>
+
+</body>
+</html>
