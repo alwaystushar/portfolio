@@ -362,14 +362,37 @@ function openWhatsApp() {
 }
 
 
-document.querySelectorAll('.info').forEach(info => {
-  const tooltipText = info.getAttribute('data-tooltip');
+// document.querySelectorAll('.info').forEach(info => {
+//   const tooltipText = info.getAttribute('data-tooltip');
 
-  // Create tooltip div
-  const tooltip = document.createElement('div');
-  tooltip.classList.add('tooltip');
-  tooltip.textContent = tooltipText;
+//   // Create tooltip div
+//   const tooltip = document.createElement('div');
+//   tooltip.classList.add('tooltip');
+//   tooltip.textContent = tooltipText;
 
-  // Append tooltip to the info div
-  info.appendChild(tooltip);
-});
+//   // Append tooltip to the info div
+//   info.appendChild(tooltip);
+// });
+
+function isTouchDevice() {
+  return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+}
+
+if (!isTouchDevice()) { // Run only on non-touch devices
+  document.querySelectorAll('.info').forEach(info => {
+      info.addEventListener("mouseenter", () => {
+          if (!info.querySelector('.tooltip')) { // Prevent multiple tooltips
+              const tooltipText = info.getAttribute('data-tooltip');
+              const tooltip = document.createElement('div');
+              tooltip.classList.add('tooltip');
+              tooltip.textContent = tooltipText;
+              info.appendChild(tooltip);
+          }
+      });
+
+      info.addEventListener("mouseleave", () => {
+          const tooltip = info.querySelector('.tooltip');
+          if (tooltip) tooltip.remove();
+      });
+  });
+}
