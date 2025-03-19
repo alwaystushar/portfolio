@@ -396,3 +396,4 @@ if (!isTouchDevice()) { // Run only on non-touch devices
       });
   });
 }
+
