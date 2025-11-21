@@ -354,7 +354,7 @@ function shownotify(type, message) {
 
 function openWhatsApp() {
   const phoneNumber = "918171839997"; // Replace with your WhatsApp number (with country code, e.g., 911234567890 for India)
-  const message = "Hello! I would like to get in touch."; // Customize your default message
+  const message = "{Hello! I would like to get in touch.}"; // Customize your default message
   const encodedMessage = encodeURIComponent(message);
 
   // Open WhatsApp with prefilled message
